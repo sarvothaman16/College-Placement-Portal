@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: college-placement-portal
+spec:
+replicas: 3
+selector:
+matchLabels:
+app: college-placement-portal
+template:
+metadata:
+labels:
+app: college-placement-portal
+spec:
+containers:
+- name: college-placement-portal
+image: sarvotham2006/college-placement-portal:1.0
+ports:
+- containerPort: 80
